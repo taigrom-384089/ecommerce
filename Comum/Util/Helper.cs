@@ -108,7 +108,7 @@ namespace Comum.Util
             return (long)elapsedTime.TotalSeconds;
         }
 
-        public static bool CheckEmail(object value, bool emailAeC = false)
+        public static bool CheckEmail(object value)
         {
             bool emailValido = true;
             MailAddress m = null;
