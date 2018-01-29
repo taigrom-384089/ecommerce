@@ -1,0 +1,572 @@
+﻿<html>
+<head>
+    <style>
+        h1, h2 {
+            color: #000;
+        }
+
+        blockquote, h6 {
+            color: #777;
+        }
+
+        hr, pre > code {
+            background: 0 0;
+        }
+
+        dl dt, table th {
+            font-weight: 700;
+        }
+
+        a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            font-family: Helvetica,arial,freesans,clean,sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+            body > :first-child {
+                margin-top: 0 !important;
+            }
+
+            body > :last-child {
+                margin-bottom: 0 !important;
+            }
+
+        blockquote, dl, ol, p, pre, table, ul {
+            margin: 15px 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 20px 0 10px;
+            padding: 0;
+            font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+        }
+
+            h1 code, h1 tt, h2 code, h2 tt, h3 code, h3 tt, h4 code, h4 tt, h5 code, h5 tt, h6 code, h6 tt {
+                font-size: inherit;
+            }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        dl dt, h5, h6 {
+            font-size: 14px;
+        }
+
+        a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6, body > h1:first-child, body > h1:first-child + h2, body > h2:first-child, body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+            margin-top: 10px;
+        }
+
+        code, pre > code, tt {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #4183C4;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        ol, ul {
+            padding-left: 30px;
+        }
+
+            blockquote > :first-child, dl dd > :first-child, dl dt > :first-child, ol li ol:first-of-type, ol li ul:first-of-type, ol li > :first-child, ul li ol:first-of-type, ul li ul:first-of-type, ul li > :first-child {
+                margin-top: 0;
+            }
+
+            blockquote > :last-child, dl dd > :last-child, dl dt > :last-child, ol ol, ol ul, ul ol, ul ul {
+                margin-bottom: 0;
+            }
+
+        dl, dl dt:first-child {
+            padding: 0;
+        }
+
+            dl dt {
+                font-style: italic;
+                padding: 0;
+                margin: 15px 0 5px;
+            }
+
+            dl dd {
+                margin: 0 0 15px;
+                padding: 0 15px;
+            }
+
+        code, pre, tt {
+            font-size: 12px;
+            font-family: Consolas,"Liberation Mono",Courier,monospace;
+        }
+
+        code, tt {
+            white-space: nowrap;
+            border: 1px solid #eaeaea;
+            background-color: #f8f8f8;
+            border-radius: 3px;
+        }
+
+        pre > code {
+            white-space: pre;
+            border: none;
+        }
+
+        pre, table tr:nth-child(2n) {
+            background-color: #f8f8f8;
+        }
+
+        pre {
+            border: 1px solid #ccc;
+            font-size: 13px;
+            line-height: 19px;
+            overflow: auto;
+            padding: 6px 10px;
+            border-radius: 3px;
+        }
+
+            pre code, pre tt {
+                background-color: transparent;
+                border: none;
+            }
+
+        kbd {
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            background-color: #DDD;
+            background-image: linear-gradient(#F1F1F1,#DDD);
+            background-repeat: repeat-x;
+            border-color: #DDD #CCC #CCC #DDD;
+            border-image: none;
+            border-radius: 2px;
+            border-style: solid;
+            border-width: 1px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            line-height: 10px;
+            padding: 1px 4px;
+        }
+
+        blockquote {
+            border-left: 4px solid #DDD;
+            padding: 0 15px;
+        }
+
+        hr {
+            clear: both;
+            margin: 15px 0;
+            height: 0;
+            overflow: hidden;
+            border: none;
+            border-bottom: 4px solid #ddd;
+            padding: 0;
+        }
+
+        table td, table th {
+            border: 1px solid #ccc;
+            padding: 6px 13px;
+        }
+
+        table tr {
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+    <title>RM - Advertências</title>
+</head>
+<body>
+    <h1>Serviços</h1>
+    <h2><code>POST /api/cliente/gravar</code></h2>
+    <p>Grava um cliente novo ou existente.</p>
+    <h3>Retorno</h3>
+    <ul>
+        <li>
+            <code>sucesso</code>
+            <ul>
+                <li>Status 200</li>
+            </ul>
+            <code>erro</code>
+            <ul>
+                <li>Cpf é inválido.</li>
+                <li>Cpf é obrigatório.</li>
+                <li>Email é obrigatório.</li>
+                <li>Endereço é obrigatório.</li>
+                <li>Telefone é obrigatório</li>
+                <li>Login ou senha inválidos.</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Exemplo</h3>
+    <pre>
+<code>POST /api/cliente/gravar
+{
+"Id" : 0,
+"Cpf" : "47668428127",
+"Nome" : "João da Silva",
+"Email" : "joaodasilva@xyz.com",
+"MaritalStatus" : 1,
+"Endereco" : {
+    "Numero": "239",
+    "Complemento": "proximo jockey",
+    "Ativo": 1,
+    "Cep" : {
+        "CepLogradouro" : "21010010",
+        "Logradouro" : {
+        	"Nome" : "R. Itapuva",
+        	"Bairro" : {
+        		"Nome" : "Parada de Lucas",
+		        "Cidade" : {
+		        	"Id" : "3304557",
+		        	"Estado" : {
+		        		"Id" : 33
+		        	}
+		        }
+        	}
+        }
+    }
+}
+,
+"Telefones" : [
+	{
+	    "Ddd": "21",
+	    "NumeroTelefone": "99999999"
+	},
+	{
+	    "Ddd": "31",
+	    "NumeroTelefone": "88888888"
+	}
+]
+}
+</code>
+    </pre>
+    <h2><code>GET /api/cliente/buscarporcpf</code></h2>
+    <p>Busca um cliente por cpf.</p>
+    <h3>Paramêtros</h3>
+    <ul>
+        <li>
+            <code>cpf</code>
+            <ul>
+                <li>Cpf de um cliente.</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Retorno</h3>
+    <ul>
+        <li>
+            Cliente com o parâmetro informado.
+        </li>
+    </ul>
+    <h3>Exemplo</h3>
+    <pre>
+    <code>GET /api/cliente/buscarporcpf?cpf=47668428127
+        {
+    "Id": 1,
+    "Cpf": "47668428127",
+    "Nome": "João da Silva",
+    "Email": "joaodasilva@xyz.com",
+    "MaritalStatus": true,
+    "Telefones": [
+        {
+            "Id": 1,
+            "Ddd": "21",
+            "NumeroTelefone": "99999999",
+            "NumeroTelefoneComDDD": "2199999999"
+        },
+        {
+            "Id": 2,
+            "Ddd": "31",
+            "NumeroTelefone": "88888888",
+            "NumeroTelefoneComDDD": "3188888888"
+        }
+    ],
+    "Endereco": {
+        "Id": 1,
+        "Cep": {
+            "Id": 1,
+            "CepLogradouro": "21010010",
+            "Logradouro": {
+                "Id": 1,
+                "Nome": "R. Itapuva",
+                "Bairro": {
+                    "Id": 1,
+                    "Nome": "Parada de Lucas",
+                    "Logradouros": null,
+                    "Cidade": {
+                        "Id": 3304557,
+                        "Nome": "Rio de Janeiro",
+                        "Bairros": null,
+                        "Estado": {
+                            "Id": 33,
+                            "Nome": "Rio de Janeiro",
+                            "Cidades": null,
+                            "UF": "RJ"
+                        }
+                    }
+                }
+            }
+        },
+        "Numero": "239"
+    }
+}
+    </code>
+    </pre>
+    <h2><code>GET /api/cliente/buscarpornome</code></h2>
+    <p>Busca clientes pelo nome.</p>
+    <h3>Paramêtros</h3>
+    <ul>
+        <li>
+            <code>nome</code>
+            <ul>
+                <li>Nome de um cliente.</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Retorno</h3>
+    <ul>
+        <li>
+            Lista de clientes com o parâmetro informado.
+        </li>
+    </ul>
+    <h3>Exemplo</h3>
+    <pre>
+    <code>GET /api/cliente/buscarpornome?nome=silva
+[
+    {
+        "Id": 1,
+        "Cpf": "47668428127",
+        "Nome": "João da Silva",
+        "Email": "joaodasilva@xyz.com",
+        "MaritalStatus": true,
+        "Telefones": [
+            {
+                "Id": 1,
+                "Ddd": "21",
+                "NumeroTelefone": "99999999",
+                "NumeroTelefoneComDDD": "2199999999"
+            },
+            {
+                "Id": 2,
+                "Ddd": "31",
+                "NumeroTelefone": "88888888",
+                "NumeroTelefoneComDDD": "3188888888"
+            }
+        ],
+        "Endereco": {
+            "Id": 1,
+            "Cep": {
+                "Id": 1,
+                "CepLogradouro": "21010010",
+                "Logradouro": {
+                    "Id": 1,
+                    "Nome": "R. Itapuva",
+                    "Bairro": {
+                        "Id": 1,
+                        "Nome": "Parada de Lucas",
+                        "Logradouros": null,
+                        "Cidade": {
+                            "Id": 3304557,
+                            "Nome": "Rio de Janeiro",
+                            "Bairros": null,
+                            "Estado": {
+                                "Id": 33,
+                                "Nome": "Rio de Janeiro",
+                                "Cidades": null,
+                                "UF": "RJ"
+                            }
+                        }
+                    }
+                }
+            },
+            "Numero": "239"
+        }
+    },
+    {
+        "Id": 2,
+        "Cpf": "53784665047",
+        "Nome": "Marcio da Silva",
+        "Email": "marcio@xyz.com",
+        "MaritalStatus": true,
+        "Telefones": [
+            {
+                "Id": 7,
+                "Ddd": "21",
+                "NumeroTelefone": "99999999",
+                "NumeroTelefoneComDDD": "2199999999"
+            }
+        ],
+        "Endereco": {
+            "Id": 2,
+            "Cep": {
+                "Id": 1,
+                "CepLogradouro": "21010010",
+                "Logradouro": {
+                    "Id": 1,
+                    "Nome": "R. Itapuva",
+                    "Bairro": {
+                        "Id": 1,
+                        "Nome": "Parada de Lucas",
+                        "Logradouros": null,
+                        "Cidade": {
+                            "Id": 3304557,
+                            "Nome": "Rio de Janeiro",
+                            "Bairros": null,
+                            "Estado": {
+                                "Id": 33,
+                                "Nome": "Rio de Janeiro",
+                                "Cidades": null,
+                                "UF": "RJ"
+                            }
+                        }
+                    }
+                }
+            },
+            "Numero": "400"
+        }
+    }
+]
+    </code>
+    </pre>
+    <h2><code>GET /api/cliente/buscarporemail</code></h2>
+    <p>Busca um cliente por email.</p>
+    <h3>Paramêtros</h3>
+    <ul>
+        <li>
+            <code>email</code>
+            <ul>
+                <li>Email de um cliente.</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Retorno</h3>
+    <ul>
+        <li>
+            Cliente com o parâmetro informado.
+        </li>
+    </ul>
+    <h3>Exemplo</h3>
+    <pre>
+    <code>GET /api/cliente/buscarporemail?email=joaodasilva@xyz.com
+        {
+    "Id": 1,
+    "Cpf": "47668428127",
+    "Nome": "João da Silva",
+    "Email": "joaodasilva@xyz.com",
+    "MaritalStatus": true,
+    "Telefones": [
+        {
+            "Id": 1,
+            "Ddd": "21",
+            "NumeroTelefone": "99999999",
+            "NumeroTelefoneComDDD": "2199999999"
+        },
+        {
+            "Id": 2,
+            "Ddd": "31",
+            "NumeroTelefone": "88888888",
+            "NumeroTelefoneComDDD": "3188888888"
+        }
+    ],
+    "Endereco": {
+        "Id": 1,
+        "Cep": {
+            "Id": 1,
+            "CepLogradouro": "21010010",
+            "Logradouro": {
+                "Id": 1,
+                "Nome": "R. Itapuva",
+                "Bairro": {
+                    "Id": 1,
+                    "Nome": "Parada de Lucas",
+                    "Logradouros": null,
+                    "Cidade": {
+                        "Id": 3304557,
+                        "Nome": "Rio de Janeiro",
+                        "Bairros": null,
+                        "Estado": {
+                            "Id": 33,
+                            "Nome": "Rio de Janeiro",
+                            "Cidades": null,
+                            "UF": "RJ"
+                        }
+                    }
+                }
+            }
+        },
+        "Numero": "239"
+    }
+}
+    </code>
+    </pre>
+    <h2><code>GET /api/estado/todos</code></h2>
+    <p>Busca todos os estados.</p>
+    <h3>Retorno</h3>
+    <ul>
+        <li>
+            Lista todos os estados.
+        </li>
+    </ul>
+    <h2><code>GET /api/cidade/todas</code></h2>
+    <p>Busca todas as cidades.</p>
+    <h3>Retorno</h3>
+    <ul>
+        <li>
+            Lista todas as cidades.
+        </li>
+    </ul>
+    <h2><code>GET /api/cidade/buscarporestado</code></h2>
+    <p>Busca todos as cidades de um estado.</p>
+    <h3>Paramêtros</h3>
+    <ul>
+        <li>
+            <code>idestado</code>
+            <ul>
+                <li>idestado do Brazil.</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Retorno</h3>
+    <ul>
+        <li>
+            Lista todas as cidades de um estado.
+        </li>
+    </ul>
+</body>
+</html>
